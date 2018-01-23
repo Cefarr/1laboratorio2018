@@ -3,41 +3,44 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package hangman.model.dictionary;
 
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
- * @author hcadavid
- * Modified by fchaves
+ * @author cesar
  */
-public class EnglishDictionaryDataSource implements Diccionary {
-
+public class FranceDictionaryDataSource implements Diccionary{
+    
     private List<Character> characterSet;
-
-    static private String words[] = {
-            "PLAYER",
-            "BALL",
-            "SOCCER",
-            "RAGE",
-            "GAME"
-    };
     private List<String> availableWords;
-
-    public EnglishDictionaryDataSource() {
+    static private String words[] = {
+            "JOUEUR",
+            "BALON",
+            "FUTBOOL",
+            "RANG",
+            "JEU"
+    };
+    
+    public FranceDictionaryDataSource(){
+     
         characterSet = createCharacterSet();
         availableWords = Arrays.asList(words);
     }
 
-    public List<String> getAvailableWords(){
+    public List<String> getAvailableWords() {
         return Arrays.asList(words);
     }
+
+
     public List<Character> getCharacterSet() {
         return characterSet;
     }
-
+    
     private List<Character> createCharacterSet() {
         List<Character> result = new ArrayList<>();
         char begin = 65;

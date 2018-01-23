@@ -103,7 +103,7 @@ public class SwingProject {
         
         functionController = new FunctionController(
                 new FunctionPanel(),
-                new FunctionModel(Color.BLACK,"Play","HighScores","Credits"),
+                new FunctionModel(Color.BLACK,"Pllay","HighScores","Credits"),
                 mainFrameController
         );
 

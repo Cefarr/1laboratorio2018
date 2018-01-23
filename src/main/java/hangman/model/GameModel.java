@@ -12,11 +12,15 @@
 ****************************************************************/ 
 package hangman.model;
 
+import hangman.model.dictionary.English;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import hangman.model.dictionary.EnglishDictionaryDataSource;
+import hangman.model.dictionary.Idiomas;
+import hangman.model.dictionary.Spanish;
+import hangman.model.dictionary.SpanishDictionaryDataSource;
 
 public class GameModel {
     private int incorrectCount;
@@ -24,18 +28,20 @@ public class GameModel {
     private LocalDateTime dateTime;
     private int gameScore;
     private int[] lettersUsed;
-    private EnglishDictionaryDataSource dictionary;
+    private Idiomas dictionary;
     private Scanner scan;
     private String randomWord;
     private char[] randomWordCharArray;
     
-    public GameModel(){
-        this.dictionary = new EnglishDictionaryDataSource();
+    public GameModel(){        
+        //this.dictionary = new SpanishDictionaryDataSource();
+        this.dictionary=new Spanish();
+               
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScore = 9100;
     }
     
     //method: reset
@@ -45,7 +51,7 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScore = 9100;
     }
 
     //setDateTime
