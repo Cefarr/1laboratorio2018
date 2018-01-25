@@ -16,26 +16,28 @@ public class France extends Idiomas{
     
     private List<Character> characterSet;
     private FranceDictionaryDataSource pr;
+    private caracterFrance carFr;
     public France(){
-        pr=new FranceDictionaryDataSource();
+        createDictionary();
+        createCarachter();
     }
 
     @Override
     public void createDictionary() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        pr=new FranceDictionaryDataSource();
     }
 
     @Override
     public void createCarachter() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        carFr=new caracterFrance();
     }
 
     @Override
     public List<String> getAvailableWords() {
         return pr.getAvailableWords();
     }
-    @Override
+    
     public List<Character> getCharacterSet() {
-        return pr.getCharacterSet();
+        return carFr.getCharacterSet();
     }
 }

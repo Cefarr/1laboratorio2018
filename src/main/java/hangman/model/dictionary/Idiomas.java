@@ -20,7 +20,7 @@ public abstract  class Idiomas {
     
     public abstract List<String> getAvailableWords();
     
-    public abstract List<Character> getCharacterSet();
+    
     
     
     

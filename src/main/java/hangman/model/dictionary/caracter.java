@@ -12,13 +12,9 @@ import java.util.List;
  *
  * @author cesar
  */
-public interface Diccionary {
-    
-  public List<String> getAvailableWords();
-  //public List<Character> getCharacterSet();
+public interface caracter {
     
     
-    
-    
+    public abstract List<Character> getCharacterSet();
     
 }

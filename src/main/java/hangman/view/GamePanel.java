@@ -34,10 +34,9 @@ public class GamePanel extends JPanel{
     private JLabel dateTimeLabel;
     private JLabel points;
     private JPanel keyboard;
-    //private HangmanPanel hmPanel;
-    //private Normal hmPanel;
-    private noViolento hmPanel;
-    //private fabMuñecos hmPanel;
+    private Normal hmPanel;
+    //private noViolento hmPanel;
+    
     private JPanel blanksHolder;
     private JButton[] keyboardButtonArray;
     private ArrayList<LetterBlankPanel> blanksArrayList;
@@ -55,8 +54,8 @@ public class GamePanel extends JPanel{
         points  = new JLabel("Placeholder");
         skipButton = new JButton("SKIP");
 
-        //hmPanel=new Normal();
-        hmPanel=new noViolento();
+        hmPanel=new Normal();
+        //hmPanel=new noViolento();
         
         this.characterSet = characterSet;
         initComponents();
@@ -167,9 +166,9 @@ public class GamePanel extends JPanel{
 
     //method: getHmPanel
     //purpose: return reference to HangmanPanel
-    //public HangmanPanel getHmPanel() {
-    //public Normal getHmPanel() {
-    public noViolento getHmPanel() {
+    
+    public Normal getHmPanel() {
+    //public noViolento getHmPanel() {
         return hmPanel;
     }
     

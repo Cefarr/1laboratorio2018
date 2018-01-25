@@ -19,20 +19,22 @@ public class Spanish extends Idiomas {
     
     private List<Character> characterSet;
     private SpanishDictionaryDataSource pr;
+    private caracterEspañol carTer;
     
     public Spanish(){
         
         createDictionary();
-        //pr=new SpanishDictionaryDataSource();
+        createCarachter();
         
     }
     @Override
     public List<String> getAvailableWords() {
         return pr.getAvailableWords();
     }
-    @Override
+    
+    
     public List<Character> getCharacterSet() {
-        return pr.getCharacterSet();
+        return carTer.getCharacterSet();
     }
     
     @Override
@@ -44,7 +46,8 @@ public class Spanish extends Idiomas {
 
     @Override
     public void createCarachter() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        carTer=new caracterEspañol();
+        
     }
     
 }

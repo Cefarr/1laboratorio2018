@@ -18,27 +18,30 @@ public class English extends Idiomas{
     
     private List<Character> characterSet;
     private EnglishDictionaryDataSource pr;
+    private caracterEnglish carEn;
+    
     public English(){
-        pr=new EnglishDictionaryDataSource();
+        createDictionary();
+        createCarachter();
     }
 
     @Override
     public void createDictionary() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        pr=new EnglishDictionaryDataSource();
     }
 
     @Override
     public void createCarachter() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            carEn=new caracterEnglish();
     }
 
     @Override
     public List<String> getAvailableWords() {
         return pr.getAvailableWords();
     }
-    @Override
+
     public List<Character> getCharacterSet() {
-        return pr.getCharacterSet();
+        return carEn.getCharacterSet();
     }
     
 }

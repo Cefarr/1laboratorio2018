@@ -18,9 +18,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import hangman.model.dictionary.EnglishDictionaryDataSource;
+import hangman.model.dictionary.France;
 import hangman.model.dictionary.Idiomas;
 import hangman.model.dictionary.Spanish;
 import hangman.model.dictionary.SpanishDictionaryDataSource;
+import hangman.model.dictionary.caracter;
+import hangman.model.dictionary.caracterEspañol;
+import hangman.model.dictionary.caracterFrance;
 
 public class GameModel {
     private int incorrectCount;
@@ -29,14 +33,18 @@ public class GameModel {
     private int gameScore;
     private int[] lettersUsed;
     private Idiomas dictionary;
+    
+    private caracter caract;
+    
     private Scanner scan;
     private String randomWord;
     private char[] randomWordCharArray;
     
     public GameModel(){        
-        //this.dictionary = new SpanishDictionaryDataSource();
         this.dictionary=new Spanish();
-               
+        //this.dictionary=new France();       
+        this.caract=new caracterEspañol();
+        //this.caract=new caracterFrance();
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
@@ -139,6 +147,6 @@ public class GameModel {
     }
 
     public List<Character> getCharacterSet() {
-        return new ArrayList<>(dictionary.getCharacterSet());
+        return new ArrayList<>(caract.getCharacterSet());
     }
 }

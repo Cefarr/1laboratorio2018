@@ -23,12 +23,17 @@ public class FranceDictionaryDataSource implements Diccionary{
             "BALON",
             "FUTBOOL",
             "RANG",
-            "JEU"
+            "JEU",
+            "ÈTRE",
+            "MOI",
+            "ON",
+            "DEUX",
+            "OÙ"
     };
     
     public FranceDictionaryDataSource(){
      
-        characterSet = createCharacterSet();
+        //characterSet = createCharacterSet();
         availableWords = Arrays.asList(words);
     }
 
@@ -36,7 +41,7 @@ public class FranceDictionaryDataSource implements Diccionary{
         return Arrays.asList(words);
     }
 
-
+/**
     public List<Character> getCharacterSet() {
         return characterSet;
     }
@@ -49,5 +54,5 @@ public class FranceDictionaryDataSource implements Diccionary{
             result.add(c);
         }
         return result;
-    }
+    }*/
 }

@@ -27,13 +27,14 @@ public class EnglishDictionaryDataSource implements Diccionary {
     private List<String> availableWords;
 
     public EnglishDictionaryDataSource() {
-        characterSet = createCharacterSet();
+        //characterSet = createCharacterSet();
         availableWords = Arrays.asList(words);
     }
 
     public List<String> getAvailableWords(){
         return Arrays.asList(words);
     }
+    /**
     public List<Character> getCharacterSet() {
         return characterSet;
     }
@@ -46,5 +47,5 @@ public class EnglishDictionaryDataSource implements Diccionary {
             result.add(c);
         }
         return result;
-    }
+    }*/
 }
