@@ -16,10 +16,10 @@ import javax.swing.JPanel;
 public interface armado {
     
     
-    public abstract void paint(Graphics g);
+    public void paint(Graphics g);
     
-    public abstract void incrementIncorrectGuesses();
+    public void incrementIncorrectGuesses();
     
-    public abstract void setIncorrectGuesses(int incorrectGuesses);
+    public void setIncorrectGuesses(int incorrectGuesses);
     
 }

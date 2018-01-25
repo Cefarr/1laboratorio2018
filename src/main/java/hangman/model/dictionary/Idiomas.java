@@ -19,9 +19,5 @@ public abstract  class Idiomas {
     public abstract void createCarachter();
     
     public abstract List<String> getAvailableWords();
-    
-    
-    
-    
-    
+        
 }

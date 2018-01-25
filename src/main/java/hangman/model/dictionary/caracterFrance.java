@@ -27,7 +27,7 @@ public class caracterFrance implements caracter {
         return characterSet;
     }
        
-        private List<Character> createCharacterSet() {
+    private List<Character> createCharacterSet() {
         List<Character> result = new ArrayList<>();
         char begin = 65;
         char end = 65+26;

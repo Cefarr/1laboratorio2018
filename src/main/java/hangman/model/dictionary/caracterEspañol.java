@@ -17,20 +17,16 @@ public class caracterEspañol implements caracter{
 
     private List<Character> characterSet;
     
-    
     public caracterEspañol(){
         characterSet = createCharacterSet();
     
-    
     }
-    
     
     @Override
     public List<Character> getCharacterSet() {
         return characterSet;
     }
-    
-       
+           
     private List<Character> createCharacterSet() {
         List<Character> result = new ArrayList<>();
         char begin = 65;

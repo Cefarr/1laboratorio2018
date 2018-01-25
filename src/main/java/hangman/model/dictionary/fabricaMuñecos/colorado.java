@@ -20,10 +20,8 @@ public class colorado extends fabMuñecos {
 
     @Override
     public void createMuñecos() {
-        mun=new munColorido();
-        
+        mun=new munColorido();        
     }
-
    
     @Override
     public void incrementIncorrectGuesses() {
@@ -37,5 +35,4 @@ public class colorado extends fabMuñecos {
     public munColorido getMuNormal(){
         return mun;
     }
-    
 }

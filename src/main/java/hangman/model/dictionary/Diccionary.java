@@ -14,11 +14,6 @@ import java.util.List;
  */
 public interface Diccionary {
     
-  public List<String> getAvailableWords();
-  //public List<Character> getCharacterSet();
-    
-    
-    
-    
+  public List<String> getAvailableWords();    
     
 }

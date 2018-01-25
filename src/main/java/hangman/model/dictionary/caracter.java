@@ -15,6 +15,6 @@ import java.util.List;
 public interface caracter {
     
     
-    public abstract List<Character> getCharacterSet();
+    public List<Character> getCharacterSet();
     
 }

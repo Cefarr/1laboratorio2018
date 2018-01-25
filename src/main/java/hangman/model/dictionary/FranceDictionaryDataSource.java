@@ -32,8 +32,7 @@ public class FranceDictionaryDataSource implements Diccionary{
     };
     
     public FranceDictionaryDataSource(){
-     
-        //characterSet = createCharacterSet();
+        
         availableWords = Arrays.asList(words);
     }
 
@@ -41,18 +40,4 @@ public class FranceDictionaryDataSource implements Diccionary{
         return Arrays.asList(words);
     }
 
-/**
-    public List<Character> getCharacterSet() {
-        return characterSet;
-    }
-    
-    private List<Character> createCharacterSet() {
-        List<Character> result = new ArrayList<>();
-        char begin = 65;
-        char end = 65+26;
-        for(char c = begin;c < end;c++) {
-            result.add(c);
-        }
-        return result;
-    }*/
 }
