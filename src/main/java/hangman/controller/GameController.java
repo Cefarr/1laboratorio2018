@@ -63,11 +63,11 @@ public class GameController{
                 }
                 
                 panel.getPoints().setText("Points: "+ Integer.toString(model.getGameScore()));
-                System.out.println("AQUI VAMOS9");
+                
                 int incorrectCount = model.getIncorrectCount();
                 int correctCount = model.getCorrectCount();
                 if(incorrectCount > 5 || correctCount == model.getWordLength()){
-                    System.out.println("AQUI VAMOS3");
+                   
                     panel.getSkipButton().setEnabled(false);
                     for(JButton button : panel.getKeyboardButtonArray()){
                         button.setEnabled(false);
@@ -75,7 +75,7 @@ public class GameController{
                     Timer timer = new Timer(1500, new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
-                            System.out.println("AQUI VAMOS4");
+                           
                             rootController.changeVisibleCard(SwingProject.GAME_OVER_KEY);
                         }
                     });
