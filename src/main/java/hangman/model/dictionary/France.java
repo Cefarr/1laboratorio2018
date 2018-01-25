@@ -19,14 +19,23 @@ public class France extends Idiomas{
     public France(){
         pr=new FranceDictionaryDataSource();
     }
-  
+
     @Override
-    public List<String> getAvailableWords(){
+    public void createDictionary() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void createCarachter() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<String> getAvailableWords() {
         return pr.getAvailableWords();
     }
     @Override
     public List<Character> getCharacterSet() {
         return pr.getCharacterSet();
     }
-    
 }

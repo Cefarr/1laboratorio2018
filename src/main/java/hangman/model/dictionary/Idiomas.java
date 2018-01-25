@@ -13,12 +13,14 @@ import java.util.List;
  * @author cesar
  */
 public abstract  class Idiomas {
-   
+ 
+    public abstract void createDictionary();
+    
+    public abstract void createCarachter();
+    
     public abstract List<String> getAvailableWords();
+    
     public abstract List<Character> getCharacterSet();
-    
-    
-    
     
     
     

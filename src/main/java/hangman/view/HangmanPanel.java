@@ -12,6 +12,7 @@
 package hangman.view;
 
 import java.awt.BasicStroke;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JPanel;
@@ -52,9 +53,12 @@ public class HangmanPanel extends JPanel{
         
         
         if(incorrectCount > 0){
+            //g.setColor(Color.red);
             g.drawOval((panelWidth/4)+ 10 - (panelHeight / 12),(panelHeight/6),panelHeight/6,panelHeight/6); // Head
+            
         }
         if(incorrectCount > 1){
+            //g.setColor(Color.YELLOW);
             g.drawLine((panelWidth / 4) + 10,(panelHeight/6)*2,(panelWidth / 4) + 10,(panelHeight/6)*3); // Torso
         }
         if(incorrectCount > 2){
@@ -62,6 +66,7 @@ public class HangmanPanel extends JPanel{
                     (((panelHeight/6)*2) + (panelHeight/18))-(panelHeight/12)); // Left Arm
         }
         if(incorrectCount > 3){
+            //g.setColor(Color.ORANGE);
             g.drawLine((panelWidth / 4) + 10,((panelHeight/6)*2) + (panelHeight/18),((panelWidth / 4) + 10) + (panelHeight/6),
                     (((panelHeight/6)*2) + (panelHeight/18))-(panelHeight/12)); // Right Arm
         }

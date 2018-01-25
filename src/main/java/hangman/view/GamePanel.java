@@ -12,6 +12,10 @@
 ****************************************************************/ 
 package hangman.view;
 
+import hangman.model.dictionary.fabricaMuñecos.Normal;
+import hangman.model.dictionary.fabricaMuñecos.fabMuñecos;
+import hangman.model.dictionary.fabricaMuñecos.muñNormal;
+import hangman.model.dictionary.fabricaMuñecos.noViolento;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -30,7 +34,10 @@ public class GamePanel extends JPanel{
     private JLabel dateTimeLabel;
     private JLabel points;
     private JPanel keyboard;
-    private HangmanPanel hmPanel;
+    //private HangmanPanel hmPanel;
+    //private Normal hmPanel;
+    private noViolento hmPanel;
+    //private fabMuñecos hmPanel;
     private JPanel blanksHolder;
     private JButton[] keyboardButtonArray;
     private ArrayList<LetterBlankPanel> blanksArrayList;
@@ -47,7 +54,10 @@ public class GamePanel extends JPanel{
         dateTimeLabel =  new JLabel("Placeholder");
         points  = new JLabel("Placeholder");
         skipButton = new JButton("SKIP");
-        hmPanel = new HangmanPanel();
+
+        //hmPanel=new Normal();
+        hmPanel=new noViolento();
+        
         this.characterSet = characterSet;
         initComponents();
     }
@@ -55,7 +65,7 @@ public class GamePanel extends JPanel{
     //initComponents
     //purpose: set up game button and graphics display arrangement
     private void initComponents() {
-        
+
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
         
@@ -68,8 +78,8 @@ public class GamePanel extends JPanel{
         this.add(topContainer, BorderLayout.PAGE_START);
         
         //center field
-        this.add(hmPanel, BorderLayout.CENTER);
-        
+        this.add(hmPanel.getMuNormal(), BorderLayout.CENTER);
+
         //left field
         this.add(points,BorderLayout.LINE_START);
         
@@ -127,6 +137,7 @@ public class GamePanel extends JPanel{
     //purpose: set points label
     public void setPoints(JLabel points) {
         this.points = points;
+        
     }
 
     //method: getGameNameLabel
@@ -156,7 +167,9 @@ public class GamePanel extends JPanel{
 
     //method: getHmPanel
     //purpose: return reference to HangmanPanel
-    public HangmanPanel getHmPanel() {
+    //public HangmanPanel getHmPanel() {
+    //public Normal getHmPanel() {
+    public noViolento getHmPanel() {
         return hmPanel;
     }
     

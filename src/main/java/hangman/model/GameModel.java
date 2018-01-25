@@ -41,7 +41,7 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 9100;
+        gameScore = 100;
     }
     
     //method: reset
@@ -51,7 +51,7 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 9100;
+        gameScore = 100;
     }
 
     //setDateTime

@@ -6,6 +6,7 @@
 
 package hangman.model.dictionary;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -18,17 +19,32 @@ public class Spanish extends Idiomas {
     
     private List<Character> characterSet;
     private SpanishDictionaryDataSource pr;
-    public Spanish(){
-        pr=new SpanishDictionaryDataSource();
-    }
     
+    public Spanish(){
+        
+        createDictionary();
+        //pr=new SpanishDictionaryDataSource();
+        
+    }
     @Override
-    public List<String> getAvailableWords(){
+    public List<String> getAvailableWords() {
         return pr.getAvailableWords();
     }
     @Override
     public List<Character> getCharacterSet() {
         return pr.getCharacterSet();
+    }
+    
+    @Override
+    public void createDictionary() {
+        pr=new SpanishDictionaryDataSource();
+        
+      
+    }
+
+    @Override
+    public void createCarachter() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

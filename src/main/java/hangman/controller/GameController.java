@@ -23,6 +23,7 @@ import javax.swing.event.AncestorListener;
 import hangman.SwingProject;
 import hangman.model.GameModel;
 import hangman.view.GamePanel;
+import java.util.logging.Level;
 
 public class GameController{
     private GamePanel panel;
@@ -31,6 +32,7 @@ public class GameController{
     
     public GameController(GamePanel panel, GameModel model, MainFrameController rootController){
         this.panel = (GamePanel) panel;
+        
         this.model = (GameModel) model;
         this.rootController = rootController;
         setup();
@@ -51,17 +53,21 @@ public class GameController{
                 ArrayList<Integer> positions = model.makeGuess(jb.getText());
                 for(int pos : positions){
                     panel.getBlanksArrayList().get(pos).setLetter(jb.getText());
+
                     panel.getBlanksArrayList().get(pos).repaint();
                 }
                 if(positions.isEmpty()){
-                    panel.getHmPanel().incrementIncorrectGuesses();
-                    panel.getHmPanel().repaint();
+
+                    panel.getHmPanel().getMuNormal().incrementIncorrectGuesses();
+                    panel.getHmPanel().getMuNormal().repaint();
                 }
                 
                 panel.getPoints().setText("Points: "+ Integer.toString(model.getGameScore()));
+                System.out.println("AQUI VAMOS9");
                 int incorrectCount = model.getIncorrectCount();
                 int correctCount = model.getCorrectCount();
                 if(incorrectCount > 5 || correctCount == model.getWordLength()){
+                    System.out.println("AQUI VAMOS3");
                     panel.getSkipButton().setEnabled(false);
                     for(JButton button : panel.getKeyboardButtonArray()){
                         button.setEnabled(false);
@@ -69,6 +75,7 @@ public class GameController{
                     Timer timer = new Timer(1500, new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
+                            System.out.println("AQUI VAMOS4");
                             rootController.changeVisibleCard(SwingProject.GAME_OVER_KEY);
                         }
                     });
@@ -131,9 +138,11 @@ public class GameController{
     //purpose: reset associated view and controller for a new game
     public void resetGame(){
         model.reset();
+        
         panel.getPoints().setText("Points: "+ Integer.toString(model.getGameScore()));
         panel.addBlanks(model.getWordLength());
-        panel.getHmPanel().setIncorrectGuesses(0);
+        //panel.getHmPanel().setIncorrectGuesses(0);
+        panel.getHmPanel().getMuNormal().setIncorrectGuesses(0);
         for(JButton jb : panel.getKeyboardButtonArray()){
             jb.setEnabled(true);
         }
